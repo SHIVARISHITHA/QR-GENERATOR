@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Montserrat:wght@700&family=Playfair+Display+SC:wght@900&family=Poppins:wght@600&family=Roboto+Slab:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0B0C10 url('https://nmcdn.io/e186d21f8c7946a19faed23c3da2f0da/347bed083486499c98f1609efa95efbd/files/qr-codes-banner2-process-s1440x-t1622668420.jpg?v=7aa6d54725') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Arvo', serif, 'Montserrat', sans-serif, 'Playfair Display SC', serif, 'Poppins', sans-serif, 'Roboto Slab', serif;
+}
+
+.container {
+    background-color: rgba(65, 68, 68, 0.9); /* Slight transparency for better contrast */
+    padding: 20px 30px;
+    border-radius: 20px;
+    line-height: 1.5;
+    transition: width 2s, height 0.2s ease;
+    height: 260px;
+}
+
+.container.active {
+    height: 530px;
+}
+
+.container:hover {
+    box-shadow: 0 8px 16px rgba(0, 128, 128, 0.4);
+}
+
+.mainheading {
+    margin-top: 10px;
+    letter-spacing: 2px;
+    padding-left: 35px;
+    color: #C5C6C7;
+}
+
+.subheading {
+    margin-top: 10px;
+    opacity: 0.8;
+    font-size: 16px;
+    color: #C5C6C7;
+}
+
+#input_from_users {
+    margin-top: 20px;
+    width: 100%;
+    height: 45px;
+    border-radius: 15px;
+    padding-left: 18px;
+    transition: width 2s;
+    outline: none;
+    background-color: #1F2833;
+    color: #C5C6C7;
+    border: 1px solid #C5C6C7;
+}
+
+#input_from_users:hover {
+    box-shadow: 0 8px 16px rgba(192, 192, 192, 0.4);
+}
+
+#generate_button {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 60px;
+    background-color: #66FCF1;
+    outline: none;
+    transition: width 2s;
+}
+
+#generate_button:hover {
+    background-color: #0B0C10;
+    color: #66FCF1;
+    box-shadow: 0 8px 16px rgba(0, 128, 128, 0.4);
+}
+
+.qr_code img {
+    margin-top: 35px;
+}
+
+.qr_code {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    border: 2px dashed #0B0C10;
+    padding-bottom: 35px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.container.active .qr_code {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.qr_code:hover {
+    box-shadow: 0 8px 16px rgba(0, 128, 128, 0.4);
+}
